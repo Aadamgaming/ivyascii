@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video to ASCII Art</title>
+    <style>
+        body {
+            font-family: monospace;
+            text-align: center;
+            margin-top: 20px;
+        }
+        #ascii-art {
+            white-space: pre;
+            font-size: 10px;
+            line-height: 10px;
+            text-align: left;
+            overflow: auto;
+        }
+        canvas {
+            display: none;
+        }
+        video {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Video to ASCII Art Generator</h1>
+    <input type="file" id="fileInput" accept="video/*">
+    <br><br>
+    <video id="video" controls></video>
+    <canvas id="canvas"></canvas>
+    <div id="ascii-art"></div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.11.8/ffmpeg.min.js"></script>
+</body>
+</html>
